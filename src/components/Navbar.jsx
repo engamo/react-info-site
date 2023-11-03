@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; 
+
 export default function Navbar(props) {
     return (
          <nav 
@@ -6,6 +8,7 @@ export default function Navbar(props) {
             <img 
                 className="nav--logo_icon"
                 src="../logo.png"
+                alt=""
             />
             <h3 className="nav--logo_text">ReactFacts</h3>
             
@@ -24,3 +27,7 @@ export default function Navbar(props) {
         </nav>
     )
 }
+Navbar.propTypes = {
+    darkMode: PropTypes.bool.isRequired, 
+    toggleDarkMode: PropTypes.func.isRequired, 
+};

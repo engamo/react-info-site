@@ -1,4 +1,6 @@
-export default function Main(props) {
+import PropTypes from 'prop-types'; 
+
+export default function MainContent(props) {
     return (
         <main className={props.darkMode ? "dark" : ""}>
             <h1 className="main--title">Fun facts about React</h1>
@@ -12,3 +14,6 @@ export default function Main(props) {
         </main>
     )
 }
+MainContent.propTypes = {
+    darkMode: PropTypes.bool.isRequired, 
+};
